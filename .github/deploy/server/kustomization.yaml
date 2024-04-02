@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - resource/service.yaml
+  - resource/deployment.yaml
+
+images:
+  - name: wangjielalala/quandian
+    newName: wangjielalala/quandian
+    newTag: 3.4.5
