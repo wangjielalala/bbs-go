@@ -8,4 +8,4 @@ resources:
 images:
   - name: wangjielalala/quandian
     newName: wangjielalala/quandian
-    newTag: 3.4.5
+    newTag: latest
