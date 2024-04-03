@@ -9,7 +9,7 @@ RUN go env -w GOPROXY=https://goproxy.cn,direct \
     && go mod download
 
 COPY . ./
-RUN CGO_ENABLED=0 go build -v -o bbs-go cmd/server/main.go && chmod +x bbs-go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -v -o bbs-go cmd/server/main.go && chmod +x bbs-go
 
 FROM alpine:latest
 
